@@ -1,0 +1,9 @@
+🎛️ 16x16 RGB Matrix AMZ: https://amzn.to/4il5OQh
+🎛️ 16x16 RGB Matrix ALI: https://s.click.aliexpress.com/e/_DFRyDXJ
+🎛️ ESP32C3 AMZ: https://amzn.to/4kt5G2W
+🎛️ ESP32C3 ALI: https://s.click.aliexpress.com/e/_DDST7Bj
+🎛️ Capacitive pushbutton Capacitivi AMZ: https://amzn.to/438dXD7
+🎛️ Capacitive pushbutton ALI: https://s.click.aliexpress.com/e/_onoDssm
+🎛️ Transparent filament AMZ: https://amzn.to/3R7phbv
+
+Refernce model: https://www.thingiverse.com/thing:1259679
