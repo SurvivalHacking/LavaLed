@@ -5,7 +5,11 @@
 // long press button = change preset
 // button pressed at startup = forget wifi information
 // with Alexa is possible to control brightness and solid color. Black color = Lava effects
-
+//
+// 20/05/2025
+// added button type management
+// BUTTON_LOGIC_INVERTED = 1 for normal NA pushbutto tied to GND
+// BUTTON_LOGIC_INVERTED = 0 for touch button
 
 // Include and base definition 
 #include <stdio.h>
@@ -22,6 +26,11 @@
 #include <Espalexa.h>    // https://github.com/Aircoookie/Espalexa
 #include <EEPROM.h>      // https://github.com/jwrw/ESP_EEPROM 
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
+
+// Button Type selection
+// BUTTON_LOGIC_INVERTED = 1 for normal NA pushbutto tied to GND
+// BUTTON_LOGIC_INVERTED = 0 for touch button
+#define BUTTON_LOGIC_INVERTED 0
 
 using namespace fl;
 
@@ -89,7 +98,18 @@ void setup() {
    // Pin configuration
    pinMode(BUTTON_MODE, INPUT_PULLUP);
   
-   if(digitalRead(BUTTON_MODE)) {
+   // I/O pin configuration
+   #if BUTTON_LOGIC_INVERTED == 1
+     // inverted logic: pull-up, push = GND (LOW)
+     pinMode(BUTTON_MODE, INPUT_PULLUP);
+     bool isModeButtonPressed = !digitalRead(BUTTON_MODE);
+   #else
+     // normal logic: pull-down, push = VCC (HIGH)
+     pinMode(BUTTON_MODE, INPUT_PULLDOWN);
+     bool isModeButtonPressed = digitalRead(BUTTON_MODE); 
+   #endif
+
+   if(isModeButtonPressed) {
    // Show rest wit red led blinking
       for(int i = 0; i < 5; i++) {
         fill_solid(leds, NUM_LEDS, CRGB::Red);
@@ -268,7 +288,14 @@ void checkButtons() {
     static bool buttonWasPressed = false;
     static bool longPressActive = false;
 
-    int buttonState = !digitalRead(BUTTON_MODE);
+    // Read button state according to loigc selected
+    #if BUTTON_LOGIC_INVERTED == 1
+      // inverted logic: pull-up, push = GND (LOW)
+      bool buttonState = digitalRead(BUTTON_MODE);
+    #else
+      // normal logic: pull-down, push = VCC (HIGH)
+      bool buttonState = !digitalRead(BUTTON_MODE);
+    #endif
 
     if (buttonState == LOW) {  // button is pressed
         if (!buttonWasPressed) {  // first press of button detected
