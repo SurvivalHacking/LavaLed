@@ -31,6 +31,3 @@ This project is distributed under the **Creative Commons Attribution-NonCommerci
 
 ## Further information
 For the full text of the license, visit <https://creativecommons.org/licenses/by-nc/4.0/>.
-
-
-Translated with DeepL.com (free version)
