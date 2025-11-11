@@ -22,7 +22,7 @@ https://davidegatti.altervista.org/
 
 ---
 ## 🎛️ Schematic
-![Practical](https://github.com/user-attachments/assets/c4931644-9676-4f5b-9081-1a5e1d318889)
+![Screenshot 2025-11-11 alle 22 48 39](https://github.com/user-attachments/assets/6f928252-a885-45f5-b64b-8f41585dec4e)
 
 ---
 ## 🎛️ BOM
