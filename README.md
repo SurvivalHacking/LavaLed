@@ -20,8 +20,22 @@ https://davidegatti.altervista.org/
 
 ![2](https://github.com/user-attachments/assets/762d1af5-f586-4e6b-82dd-8ac58bbf9a9c)
 
+---
+## 🎛️ Schematic
 ![Practical](https://github.com/user-attachments/assets/c4931644-9676-4f5b-9081-1a5e1d318889)
 
+---
+## 🎛️ BOM
+* 16x16 RGB Matrix AMZ: https://amzn.to/4il5OQh
+* 16x16 RGB Matrix ALI: https://s.click.aliexpress.com/e/_DFRyDXJ
+* ESP32C3 AMZ: https://amzn.to/4kt5G2W
+* ESP32C3 ALI: https://s.click.aliexpress.com/e/_DDST7Bj
+* Capacitive pushbutton Capacitivi AMZ: https://amzn.to/438dXD7
+* Capacitive pushbutton ALI: https://s.click.aliexpress.com/e/_onoDssm
+* Transparent filament AMZ: https://amzn.to/3R7phbv
+* Affiliate links
+ 
+---
 ## 🧾 License
 
 This project is distributed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
